@@ -1,0 +1,127 @@
+/*------------------------------------------------------------------
+ [Master Stylesheet]
+
+  Project:	Regal Admin
+  Version:	1.0.0
+-------------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------------
+  ===== Table of Contents =====
+
+  * Bootstrap functions
+  * Template variables
+  * SCSS Compass Functions
+  * Boostrap Main SCSS
+  * Template mixins
+    + Animation Mixins
+    + Badge Mixins
+    + Button Mixins
+    + Miscellaneous Mixins
+    + BlockQuote Mixins
+    + Cards Mixins
+    + Color Functions Mixins
+    + Tooltips
+  * Core Styles
+    + Reset Styles
+    + Fonts
+    + Functions
+    + Backgrounds
+    + Sidebar
+    + Navbar
+    + Typography
+    + Miscellaneous
+    + Footer
+    + Layouts
+    + Utilities
+    + Demo styles
+  * Components
+    + Buttons
+    + Breadcrumbs
+    + Cards
+    + Checkboxes and Radios
+    + Dropdowns
+    + Forms
+    + Icons
+    + Lists
+    + Preview
+    + Tables
+  * Plugin Overrides
+    + Bootstrap Tour
+    + Jquery File Upload
+    + Progressbar-js
+    + Rating
+    + Select2
+    + Typeahead
+  * Landing screens
+    + Auth
+-------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------*/
+/* === Import Bootstrap functions and variables === */
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+/*-------------------------------------------------------------------*/
+/* === Import template variables === */
+@import "variables";
+
+/*-------------------------------------------------------------------*/
+/* === SCSS Compass Functions === */
+@import "../node_modules/compass-mixins/lib/compass";
+@import "../node_modules/compass-mixins/lib/animate";
+
+/*-------------------------------------------------------------------*/
+/* === Boostrap Main SCSS === */
+@import "../node_modules/bootstrap/scss/bootstrap";
+/*-------------------------------------------------------------------*/
+/* === Template mixins === */
+@import "mixins/misc";
+@import "mixins/animation";
+@import "mixins/blockqoute";
+@import "mixins/buttons";
+@import "mixins/cards";
+
+/*-------------------------------------------------------------------*/
+/* === Core Styles === */
+@import "reset";
+@import "fonts";
+@import "functions";
+@import "background";
+@import "typography";
+@import "misc";
+@import "footer";
+@import "utilities";
+@import "demo";
+@import "dashboard";
+
+/*-------------------------------------------------------------------*/
+/* === Components === */
+@import "components/bootstrap-progress";
+@import "components/buttons";
+@import "components/cards";
+@import "components/checkbox-radio";
+@import "components/dropdown";
+@import "components/forms";
+@import "components/lists";
+@import "components/icons";
+@import "components/preview";
+@import "components/tables";
+@import "components/toggle-switch";
+
+/*-------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------*/
+/* === Plugin overrides === */
+@import "components/plugin-overrides/jquery-file-upload";
+@import "components/plugin-overrides/progressbar-js";
+@import "components/plugin-overrides/rating";
+@import "components/plugin-overrides/select2";
+@import "components/plugin-overrides/typeahead";
+
+/*-------------------------------------------------------------------*/
+/* === Landing screens === */
+@import "landing-screens/auth";

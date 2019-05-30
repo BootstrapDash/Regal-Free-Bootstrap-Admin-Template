@@ -1,0 +1,268 @@
+/* Sidebar */
+
+.sidebar {
+  min-height: calc(100vh - #{$navbar-height});
+  background: $sidebar-light-bg;
+  font-family: $type1;
+  font-weight: normal;
+  padding: 0;
+  width: $sidebar-width-lg;
+  z-index: 11;
+  transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+  -webkit-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+  -moz-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+  -ms-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+  box-shadow: $sidebar-box-shadow;
+  -webkit-box-shadow: $sidebar-box-shadow;
+  -moz-box-shadow: $sidebar-box-shadow;
+  -ms-box-shadow: $sidebar-box-shadow;
+
+  .nav {
+    overflow: hidden;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-bottom: 60px;
+
+    .nav-item {
+      @include transition-duration(0.25s);
+      transition-property: background;
+      -webkit-transition-property: background;
+      .collapse {
+        z-index: 999;
+      }
+
+      .nav-link {
+        @include display-flex;
+        @include align-items(baseline);
+        white-space: nowrap;
+        padding: $sidebar-menu-padding-top $sidebar-menu-padding-right $sidebar-menu-padding-bottom $sidebar-menu-padding-left;
+        margin: 0 1.5rem;
+        color: $sidebar-light-menu-color;
+        @include transition-duration(0.45s);
+        transition-property: background;
+        -webkit-transition-property: background;
+        font-weight: bold;
+        border-top: 1px solid $sidebar-light-menu-border-color;
+
+        i {
+          color: inherit;
+
+          &.menu-icon {
+            font-size: $sidebar-icon-font-size;
+            line-height: 1;
+            margin-right: 1.125rem;
+            .rtl & {
+              margin-left: 2rem;
+              margin-right: 0;
+            }
+            color: $sidebar-light-menu-icon-color;
+            &:before {
+              vertical-align: middle;
+            }
+          }
+          &.menu-arrow {
+            display: inline-block;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            margin-left: auto;
+            margin-right: 0;
+            color: $sidebar-light-menu-arrow-color;
+            .rtl & {
+              margin-left: 0;
+              margin-right: auto;
+            }
+
+            &:before {
+              content: "\F142";
+              font-family: "Material Design Icons";
+              font-style: normal;
+              display: block;
+              font-size: 1rem;
+              line-height: 10px;
+              -webkit-transition: all 0.2s ease-in;
+              -moz-transition: all 0.2s ease-in;
+              -ms-transition: all 0.2s ease-in;
+              -o-transition: all 0.2s ease-in;
+              transition: all 0.2s ease-in;
+            }
+          }
+        }
+
+        .menu-title {
+          color: inherit;
+          display: inline-block;
+          font-size: $sidebar-menu-font-size;
+          line-height: 1;
+          vertical-align: middle;
+        }
+
+        .badge {
+          margin-left: auto;
+          .rtl & {
+            margin-left: 0;
+            margin-right: auto;
+          }
+        }
+        &[aria-expanded="true"] {
+          background: $sidebar-light-menu-active-bg;
+          border-top: 1px solid $sidebar-light-bg;
+          border-radius: 4px;
+          &:hover {
+            border-top: 1px solid none;
+          }
+          i {
+            &.menu-arrow {
+              &:before {
+                @include rotate(90);
+              }
+            }
+          }
+        }
+      }
+
+      &.active {
+        > .nav-link {
+            background: $sidebar-light-menu-active-bg;
+            position: relative;
+            border-top: 1px solid transparent;
+            border-radius:4px;
+            i,
+            .menu-title,
+            .menu-arrow {
+              color: $sidebar-light-menu-active-color;
+            }
+        }
+        + .nav-item {
+          .nav-link {
+              border-top: 1px solid $sidebar-light-submenu-hover-border;
+          }
+        }
+      }
+      &:first-child {
+        .nav-link {
+          border-top: 1px solid $sidebar-light-bg;
+        }
+      }
+    }
+
+    &:not(.sub-menu) {
+      margin-top: .5rem;
+      > .nav-item {
+        margin-top: 0;
+        > .nav-link {
+          
+        }
+        &:hover {
+          > .nav-link {
+            background: $sidebar-light-menu-hover-bg;
+            color: $sidebar-light-menu-hover-color; 
+            border-radius:4px;
+            border-top:1px solid $sidebar-light-submenu-hover-border;
+            i {
+              &.menu-arrow {
+                color: $sidebar-light-menu-icon-hover-color;
+              }
+              &.menu-icon {
+                color: $sidebar-light-menu-icon-hover-color;
+              }
+            }                                  
+          }
+          + .nav-item {
+            .nav-link {
+                border-top: 1px solid $sidebar-light-submenu-hover-border;
+            }
+          }
+        }
+      }
+    }
+    &.sub-menu {
+      margin-bottom: 0;
+      margin-top:0;
+      list-style: none;
+      padding: $sidebar-submenu-padding;
+      margin: 0 1.5rem;
+      background: $sidebar-light-submenu-bg;
+
+      .nav-item {
+        padding: 0rem;
+        position: relative;
+        .nav-link { 
+          color: $sidebar-light-submenu-color;
+          padding: $sidebar-submenu-item-padding;
+          position: relative;
+          font-size: $sidebar-submenu-font-size;
+          line-height: 1;
+          height: auto;
+          border-top: 1px solid $sidebar-light-bg;
+          margin: 0;
+          &:hover {
+            color: $sidebar-light-submenu-hover-color;
+            background: transparent;
+            &::before {
+              border: 1px solid $sidebar-light-submenu-hover-color;
+            }
+          }
+          &.active {
+            color: $sidebar-light-submenu-active-color;
+            &::before {
+              border: 1px solid $sidebar-light-submenu-hover-color;
+            } 
+          }
+
+          &::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            margin-top: 21px;
+            border-radius: 50%;
+            border: 2px solid $white;
+            left: 2.5rem;
+            top: -2px;
+          }
+        }
+
+      &:first-child {
+        .nav-link {
+          border-top: 1px solid $sidebar-light-bg;
+        }
+      }
+      }
+    }
+  }
+  .user-profile {
+      margin: 2rem 0;
+      text-align: center;
+      color: $white;
+      font-weight: bold;
+      .user-image {
+        img {
+          width: 79px;
+          height: 79px;
+          border-radius:100%;
+          margin-bottom: .625rem;
+        }
+      }
+      .user-name {
+        font-weight: bold;
+        margin-bottom: .5rem;
+      }
+  }
+}
+/* style for off-canvas menu*/
+@media screen and (max-width: 991px) {
+  .sidebar-offcanvas {
+    position: fixed;
+    max-height: calc(100vh - #{$navbar-height});
+    top: $navbar-height;
+    bottom: 0;
+    overflow: auto;
+    right: -$sidebar-width-lg;
+    -webkit-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+    &.active {
+      right: 0;
+    }
+  }
+}

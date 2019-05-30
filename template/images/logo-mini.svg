@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="20px" viewBox="0 0 22 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>Logo_mini</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M4,14 C4.55228475,14 5,14.4477153 5,15 C5,15.5522847 4.55228475,16 4,16 L3,16 C1.34314575,16 0,14.6568542 0,13 L0,3 C-3.33066907e-16,1.34314575 1.34314575,0 3,0 L19,0 C20.6568542,0 22,1.34314575 22,3 L22,13 C22,14.6568542 20.6568542,16 19,16 L18,16 C17.4477153,16 17,15.5522847 17,15 C17,14.4477153 17.4477153,14 18,14 L19,14 C19.5522847,14 20,13.5522847 20,13 L20,3 C20,2.44771525 19.5522847,2 19,2 L3,2 C2.44771525,2 2,2.44771525 2,3 L2,13 C2,13.5522847 2.44771525,14 3,14 L4,14 Z M11.7682213,12.3598156 L16.7682213,18.3598156 C17.3109937,19.0111425 16.8478376,20 16,20 L6,20 C5.15216235,20 4.68900628,19.0111425 5.23177872,18.3598156 L10.2317787,12.3598156 C10.6315738,11.8800615 11.3684262,11.8800615 11.7682213,12.3598156 Z M8.13504161,18 L13.8649584,18 L11,14.5620499 L8.13504161,18 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo_mini">
+            <g id="airplay" transform="translate(11.000000, 10.000000) scale(1, -1) translate(-11.000000, -10.000000) ">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Combined-Shape" fill="#FFFFFF" fill-rule="nonzero" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

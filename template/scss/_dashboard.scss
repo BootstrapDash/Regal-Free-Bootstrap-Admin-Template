@@ -1,0 +1,22 @@
+.chart-legends {
+  .legend-label {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    display: block;
+    margin-right: 5px;
+  }
+}
+.traffic-source-legend {
+  .legend-label {
+    padding: 7px 0;
+    span {
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      display: inline-block;
+      margin-right: .5rem;
+    }
+  }
+  
+}
