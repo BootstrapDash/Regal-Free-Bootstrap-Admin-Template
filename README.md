@@ -20,6 +20,6 @@ Check out the preview of Regal Admin template [here](http://www.templatewatch.co
     Start editing the code as per your requirement
   </li>
   <li>
-    If you wish to customize the template, use the command 'npm install' to install the necessary dependencies. Refer <a href="http://www.templatewatch.com/regal/template/documentation/documentation.html">documentaion</a> for more details on customization.
+    If you wish to customize the template, use the command 'npm install' to install the necessary dependencies. Refer <a href="http://www.templatewatch.com/regal-free/template/documentation/documentation.html">documentaion</a> for more details on customization.
   </li>
 </ul>
