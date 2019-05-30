@@ -4,7 +4,7 @@ The free and responsive Regal Bootstrap admin template has an easy to comprehend
 
 Check out the preview of Regal Admin template [here](http://www.templatewatch.com/regal/template/index.html)
 
-[![N|Solid](preview.jpg)](http://www.templatewatch.com/regal/template/index.html)
+[![N|Solid](preview.jpg)](http://www.templatewatch.com/regal-free/template/index.html)
 
 
 <h2>How to use</h2>
